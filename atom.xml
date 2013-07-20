@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[]]></title>
+  <link href="http://wholeslide.github.io/atom.xml" rel="self"/>
+  <link href="http://wholeslide.github.io/"/>
+  <updated>2013-07-20T15:36:26-07:00</updated>
+  <id>http://wholeslide.github.io/</id>
+  <author>
+    <name><![CDATA[Rich Stoner]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Old news]]></title>
+    <link href="http://wholeslide.github.io/blog/2013/07/20/old-news/"/>
+    <updated>2013-07-20T13:48:00-07:00</updated>
+    <id>http://wholeslide.github.io/blog/2013/07/20/old-news</id>
+    <content type="html"><![CDATA[<h3>February 20th, 2012</h3>
+
+<p><a href="http://vimeo.com/36066248">Tech Demo (vimeo)</a> integrating Nuance speech technologies into the next generation of WholeSlide core technology.</p>
+
+<h3>December 19th, 2011</h3>
+
+<p>Released &ldquo;Cognitive Consilience&rdquo; in collaboration with Soren Solari &ndash; a comprehensive review of cortical neuroanatomy. <a href="http://ucsdhealthsciences.tumblr.com/post/14460482894/cognitive-consilience-more-than-a-century-ago-a">UCSD posting.</a></p>
+
+<h3>December 1st, /2011</h3>
+
+<p>We are pleased to announce a partnership with Aperio Technologies, Inc and look forward to providing tools to the next generation of digital pathologists.</p>
+
+<h3>October 11th, 2011</h3>
+
+<p>Version 1.05 has been pushed to the app store, addressing minor bugs and adding support for the <a href="http://openconnectomeproject.org">OpenConnectome</a> datasets.<a href="http://itunes.apple.com/us/app/wholeslide/id448006595?ls=1&mt=8"> Available on the App Store</a> (free)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The blog is alive]]></title>
+    <link href="http://wholeslide.github.io/blog/2013/07/20/the-blog-is-alive/"/>
+    <updated>2013-07-20T13:45:00-07:00</updated>
+    <id>http://wholeslide.github.io/blog/2013/07/20/the-blog-is-alive</id>
+    <content type="html"><![CDATA[<p>This blog will house the updates for the open source project along with any collaborations.</p>
+]]></content>
+  </entry>
+  
+</feed>
