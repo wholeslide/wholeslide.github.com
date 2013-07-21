@@ -805,13 +805,6 @@ init_mathjax();
 </header>
   <nav role="navigation">
   
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:wholeslide.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
 <ul class="main-navigation">
   <li><a href="/app/">App</a></li>
     <!--<li><a href="/blog/archives">Archives</a></li>-->
@@ -843,9 +836,9 @@ init_mathjax();
     var arrParams = arrURL[3].split("?");
     var searchParam = arrParams[0].substr(0, arrParams[0].lastIndexOf("."));
     
-    document.write('<a href="http://google.com/search?q=site:wholeslide.github.io ' + searchParam + '">search</a>')
+    document.write('<a href="false?q=site:wholeslide.github.io ' + searchParam + '">search</a>')
   </script>
-  <noscript><a href="http://google.com/search?q=site%3Awholeslide.github.io">search</a></noscript>
+  <noscript><a href="false?q=site%3Awholeslide.github.io">search</a></noscript>
   box (top right corner), browse the
   <a href="/blog/archives">archives</a> or go to the
   <a href="/">frontpage</a>.
