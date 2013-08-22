@@ -827,11 +827,99 @@ init_mathjax();
     <h1 class="entry-title">Figurezero</h1>
   </header>
   
-  <p>If you&rsquo;re looking for FigureZero, you&rsquo;re in the correct location. This address (<a href="http://wholeslide.com/figurezero/">http://wholeslide.com/figurezero/</a>) is the new home for all developments regarding FigureZero.</p>
+  <p><em>If you&rsquo;re looking for FigureZero, you&rsquo;re in the correct location. This address (<a href="http://wholeslide.com/figurezero/">http://wholeslide.com/figurezero/</a>) is the new home for all developments regarding FigureZero.</em></p>
+
+<h3>About FigureZero</h3>
+
+<p>Figure Zero was an experimental take on the traditional Figure 1. We&rsquo;ve used modern technologies to create a new kind of research communication, available as web and iOS applications. The technology is a core component in a larger medical education platform being developed in partnership with the Distributed Health Lab at UCSD.</p>
+
+<p><img src="http://wholeslide.com/images/fzoverview.png" alt="" /></p>
+
+<p>A recent push for online and open publication has yielded an opportunity to create rich, interactive presentations of scientific research. Unlike static images found in traditional publications, FigureZero is an interactive zoomable canvas on which authors can map regions of interest, create annotations, and embed citations to share with other researchers. A single FigureZero figure can contain hundreds of annotations, each unique and capable of encapsulating a variety of formats (PubMed ID, D.O.I., YouTube, and Vimeo).</p>
+
+<iframe class="hidden-phone" src="http://player.vimeo.com/video/51117434?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="600" height="298" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+
+<p>FigureZero was built to fill a need of researchers and educators worldwide. We welcome feedback and community involvement throughout our beta test (Oct. 1 &ndash; Dec. 31, 2012). For more information, follow us @figurezero or email us at contact (at) figurezero.com</p>
+
+<p>We hope you found it useful!</p>
+
+<h3>The Team</h3>
+
+<p><strong>Who built FigureZero?</strong></p>
+
+<p>Rich Stoner @rmstoner &ndash; Lead developer and somewhat scattered (UPitt Neuroengineering PhD, UCSD Neurosciences postdoc CV). Trying to reinvent medical education.</p>
+
+<p><strong>Who helped?</strong></p>
+
+<p>Justin Kiggins @neuromusic &ndash; brains / beer / bicycling / computational neuroscience PhD student</p>
+
+<p>Dan Knudsen @neurodan &ndash; I love brains more than zombies do. (UCSD Neurosciences PhD)</p>
+
+<p>Philip Meier @hooPhilip &ndash; design / UX / video</p>
+
+<p>Soren Solari &ndash; Opera Solutions (UCSD Neurosciences PhD)</p>
+
+<p><strong>Advisors</strong></p>
+
+<p>Stephen Larson @slars0n &ndash; entrepreneur/scientist/engineer/nerd &mdash; excited by ai, neuroscience, computers, politics &mdash; oh &amp; having fun as a human being in the real world too ;) (UCSD Neurosciences PhD)</p>
+
+<p>Eli Spencer &ndash; UCSD School of Medicine, Div. of Infectious Disease (MD PhD Albert Einstein SOM)</p>
+
+<p>David Matthews @e2pi &ndash; computational neuroscientist (UCSD Neurosciences PhD)</p>
+
+<p><strong>Additional thanks…</strong></p>
+
+<p>To the excellent group of hackers &amp; neuroscientists from the INCF &amp; AIBS hackathons for their feedback, criticisms, and technical advice.
+To <a href="http://sciple.org/">http://sciple.org/</a> group for their helpful comments and for hacksfn.org, a tool to greatly improve SFN abstract search and sharing.</p>
+
+<h3>The FAQ</h3>
+
+<p><strong>How can I use FigureZero?</strong></p>
+
+<p>Create a dynamic version of a poster by adding embedded links to pubmed ID, DOI url, and web-based video.</p>
+
+<p>Share your poster easily by emailing a short link to the figure or printing out a QR code for others to scan.</p>
+
+<p>Embed regions of interest, each directly citable, in blogs or wikis.</p>
+
+<p>Search and star figures of interest to show your lab mates after the conference.</p>
+
+<p>Collect statistics about how often your figure and regions of interest are viewed.</p>
+
+<p>What else should I ask about FigureZero?</p>
+
+<p><strong>How much does it cost?</strong></p>
+
+<p>Nothing. During the beta period (until 12/31/2012), FigureZero will be run as an experiment. During this time we&rsquo;ll be collecting valuable feedback to determine the best mechanism to support the service.</p>
+
+<h3>The Tech</h3>
+
+<p><strong>Technical overview
+</strong>
+FigureZero is built with recent modern web &amp; iOS technologies. How they all work together is a bit of magic and mystery, but as a whole we have a reasonably stable, scalable platform. We have been feature complete since late September, 2012.</p>
+
+<p><strong>Server</strong></p>
+
+<p>We have a python-happy backend running tornado fronted by NGINX with supervisor managing. It&rsquo;s a loosely coupled architecture with SQS between, storage on S3, and hopefully taking advantage of the recent CORS addition for serving tiles. For user management and all database work, we use parse.com. It’s incredible and we’re not getting paid to say that. It has made life easy for cross-platform web + mobile application development.</p>
+
+<p><strong>Front end</strong></p>
+
+<p>On the mobile side, we’ve built a universal app with cocoapods.org for managing packages. We rely heavily on parse.com for user accounts and session management. User interface consists of SVSegmentedControl, UIGlossyButton, EGO, TSPopover and a bunch of custom code. ZXing for qrcode scanning. AFNetworking for anything parse.com doesn’t handle and Testflightapp for beta testing and Google for analytics.</p>
+
+<p><strong>Web app</strong></p>
+
+<p>The web app is a backbone.js app with a few jquery elements running on a parse.com base with a heavy reliance on bootstrap + jasny. It was primarily an experiment in learning javascript MVC but in the end resulting in a stable, responsive, and somewhat attractive web application. Zoomable image viewing is provided by leaflet. Annotations are stored in geojson and arbitrarily limited to markers and rectangles. Future versions could make use of multiline polygons and/or circles.
+More time was spent selecting the components than actually piecing them togther them. Send us an email (contact (at) figurezero.com) if you’re interested in learning more about how this all comes together.</p>
+
+<p>If all of that sounds like gibberish, imagine how neuroscience terminology sounds to the startup crowd in Silicon Valley.</p>
+
+<hr>
+
 
 <p>We&rsquo;re in the process of opening the source code behind figurezero and repackaging it as a standalone amazon machine image.</p>
 
-<p>Stay tuned!</p>
+<h4>Stay tuned!</h4>
 
   
 </article>
