@@ -9,7 +9,7 @@
   <meta name="author" content="Rich Stoner">
 
   
-  <meta name="description" content="Open Slide Viewer An open source medical education app for students around the world. 1. TL;DR Purpose To develop an open source iOS app for viewing &hellip;">
+  <meta name="description" content="Open Slide Viewer An open medical education app for students around the world. 1. TL;DR Purpose To develop an open source1 iOS app for viewing high &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -827,7 +827,7 @@ init_mathjax();
     <h1 class="entry-title">Open Slide Viewer</h1>
   </header>
   
-  <h2>An open source medical education app for students around the world.</h2>
+  <h2>An open medical education app for students around the world.</h2>
 
 <p><img src="http://wholeslide.com/images/ipad-mockup.jpg" alt="iPad mockup" /></p>
 
@@ -835,7 +835,7 @@ init_mathjax();
 
 <h4>Purpose</h4>
 
-<p>To develop an open source iOS app for viewing high resolution virtual microscopy slides from open access content providers.</p>
+<p>To develop an open source<sup>1</sup> iOS app for viewing high resolution virtual microscopy slides from open access content providers.</p>
 
 <h4>What are virtual slides?</h4>
 
@@ -849,7 +849,7 @@ init_mathjax();
 
 <p>Instruction and reference &ndash; Teachers can organize their content or use it during class. Students can follow along or consult the app later for reference. <a href="https://github.com/wholeslide/wholeslidesupport/wiki/User-stories">More</a></p>
 
-<h4>Why open source it?</h4>
+<h4>Why open source<sup>1</sup> it?</h4>
 
 <p>Lack of scalable market, resistance to open source, and very slow tech innovation in MedEd means this app would never be funded commercially</p>
 
@@ -863,6 +863,8 @@ init_mathjax();
 </ul>
 
 
+<p><sup>1</sup><small>The software license used is similar to that of software released by any major University. It is free to use for personal, research, and academic purposes. A standalone license is required for any clinical or commercial applications.</small></p>
+
 <h3>2. Jumpstarting medical education technology</h3>
 
 <p>I&rsquo;ve created this project to develop an open source tablet-based virtual slide viewer for medical education. Such a product would rarely be funded as a research endeavor and has no scalable business model as a startup. This is a personal effort to put a usable tool into the hands of those that could teach with it and learn through it.</p>
@@ -871,7 +873,7 @@ init_mathjax();
 
 <p>With support from key sponsors and organizations, I will write a new version of WholeSlide taking advantage of the many improvements in modern iOS and Android development. It will be open source from day one, with each commit visible on a public github repository. To emphasize broader utility, I will engage early on with progressive academic institutions, agile industry partners, and philanthropic organizations interested in global medical education. The target audience will be US-based educators and students, with long-term targets aimed at international medical organizations and/or partnerships (e.g. UCSD’s Mepi project).</p>
 
-<p>When complete (~ early 2014), I will publish a free, ad-free version of the application to the iTunes and Google Play store. The source code will remain available on github under a Creative Commons license (CC-BY-NC-SA license). Finally, I will compile a list of related tools and best practices for working with virtual microscopy slides targeted towards inexpensive but capable solutions for programs in developing nations.</p>
+<p>When complete (~ early 2014), I will publish a free, ad-free version of the application to the iTunes and Google Play store. The source code will remain available on github under an <a href="https://github.com/wholeslide/openslideviewer/blob/master/LICENSE">open license</a>. Finally, I will compile a list of related tools and best practices for working with virtual microscopy slides targeted towards inexpensive but capable solutions for programs in developing nations.</p>
 
 <h3>3. The proposal</h3>
 
@@ -881,14 +883,17 @@ init_mathjax();
 
 <p>We will start with a series of user stories and build from them a focused user interface. Unlike the original WholeSlide application, the new version will be built around a modular design with a goal of easy extensibility and customization.</p>
 
-<p>Architecture Diagram (proposed)
-The backend will support a range of virtual slide servers, image formats, and annotation formats. Browser modules will be built to support a range of content providers while a common virtual slide viewer will handle efficient image rendering.</p>
+<p><strong>Architecture Diagram (proposed)</strong></p>
+
+<p><img src="https://raw.github.com/wholeslide/wholeslidesupport/master/images/architecture-diagram.png" alt="image" /></p>
+
+<p>The backend will support a range of virtual slide servers, image formats, and annotation formats. Browser modules will be built to support a range of content providers while a common virtual slide viewer will handle efficient image rendering.</p>
 
 <p>Slide interaction modules will sit at the top of the stack providing ways to adjust the image properties, annotation details, or do something clever like link to an image search API.</p>
 
 <h4>What will it look like?</h4>
 
-<p>Aesthetically, we will use a simple palette and pay homage to the great Sublime Text 2 user interface. All textures and icons will be CC, GPL-safe, or released in the public domain.</p>
+<p>Aesthetically, we will use a simple palette and pay homage to the great Sublime Text 2 user interface. All textures and icons will be selected from Creative Commons or public domain sources.</p>
 
 <p><img src="https://raw.github.com/wholeslide/wholeslidesupport/master/design/concept/preview-ipad.004.jpg" alt="basic view" /></p>
 
@@ -900,7 +905,7 @@ The backend will support a range of virtual slide servers, image formats, and an
 
 <p><a href="https://github.com/wholeslide/wholeslidesupport/wiki/User-interface-concepts">Course view</a></p>
 
-<p>All content in the design and development processes will be made available on github.com and released under a Creative Commons Attribution-NonCommercial-ShareAlike license.</p>
+<p>All content in the design and development processes will be made available on github.com and released under an open license (derived from UCSD&rsquo;s <a href="http://invent.ucsd.edu/researchers/uc_copyright_notice.shtml">academic, non-commercial license</a>).</p>
 
 <h4>How can you help?</h4>
 
@@ -910,18 +915,17 @@ The backend will support a range of virtual slide servers, image formats, and an
 <li><p>If you&rsquo;re an <strong>educator</strong>, help us make the interface work as best as it can to provide an intuitive interface on top of your content. Become a beta tester to get early access to each build, with new releases pushed as features get added.</p></li>
 <li><p>If you&rsquo;re a <strong>student</strong>, help raise awareness for this project &ndash; pass the word on to your instructors or school administrators.</p></li>
 <li><p><strong>Philanthropists and Non-profits</strong> &ndash; Sponsor this project or a feature within. In addition to providing a tool for domestic (US-based) medical education &ndash; we&rsquo;re actively looking at ways to get this app or an Android equivalent into the hands of medical students around the world.</p></li>
-<li><p><strong>Developers &amp; Designers</strong> &ndash; Volunteer. This development will be done out in the open with all content and coding committed to public github repositories. You&rsquo;re free at any time to branch the code and start on any features or ideas you may have.</p></li>
 </ul>
 
 
-<h4>Why open source? Why not _______?</h4>
+<h4>Why open? Why not _______?</h4>
 
 <p>Commercial options were considered but decided against for the following reasons:</p>
 
 <ul>
 <li>The market to support such an application is small.</li>
 <li>The primary customers &ndash; medical students and researchers &ndash; are already loaded with debt.</li>
-<li>By making the app open source and free, open access content providers, server vendors, and academic institutions can come together to produce a single great thing rather than many single-purpose applications.</li>
+<li>By making the app open source and free, open-access content providers, server vendors, and academic institutions can come together to produce a single great thing rather than many single-purpose applications.</li>
 </ul>
 
 
