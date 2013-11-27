@@ -11,7 +11,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>http://wholeslide.com/testing/Biolucida-79.ipa</string>
+					<string>http://wholeslide.com/testing/Biolucida-80.ipa</string>
 				</dict>
 			</array>
 			<key>metadata</key>
@@ -19,11 +19,11 @@
 				<key>bundle-identifier</key>
 				<string>com.wholeslide.biolucidaviewer</string>
 				<key>bundle-version</key>
-				<string>79</string>
+				<string>80</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>Biolucida-79</string>
+				<string>Biolucida-80</string>
 			</dict>
 		</dict>
 	</array>
