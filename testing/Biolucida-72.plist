@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>assets</key>
+			<array>
+				<dict>
+					<key>kind</key>
+					<string>software-package</string>
+					<key>url</key>
+					<string>http://wholeslide.com/open/testing/Biolucida-72.ipa</string>
+				</dict>
+			</array>
+			<key>metadata</key>
+			<dict>
+				<key>bundle-identifier</key>
+				<string>com.wholeslide.biolucidaviewer</string>
+				<key>bundle-version</key>
+				<string>72</string>
+				<key>kind</key>
+				<string>software</string>
+				<key>title</key>
+				<string>Biolucida-72</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
