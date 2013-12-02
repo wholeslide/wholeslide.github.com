@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Biolucida Test build</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Le styles -->
+	<link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+	<style type="text/css">
+		body { padding-top: 10px; padding-bottom: 20px; 
+		/*background-image: url(shattered_@2X.png);*/
+		/*background-repeat: repeat;*/
+        /*background-color: #9900cc;*/
+
+		}
+
+        .large-logo {
+            width: 150px;
+            height: 150px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            -webkit-box-shadow: 0px 3px 5px 2px , , 0, 0.4);
+            box-shadow: 0px 3px 5px 2px , , 0, 0.4);
+
+        }
+	</style>
+	<link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div class="container">
+		<br><br>
+		<div class="row">
+			<div class="span4">
+			
+				<center><img class="large-logo" src="./Logo@2x.png"/>
+			
+				<div id="loginArea">
+                <br>
+				<div class="control-group">
+					<label class="control-label" for="input01">Please enter access code</label>
+					<div class="controls">
+						<input type="text" class="input" id="input01">
+						<div id="submitButton" class="btn btn-primary">Submit</div>
+					</div>
+				</div>
+				</div>
+
+
+				<div id="hiddenLink" style="display:none;">
+                    <br><br>
+					<div style="width:250px;">For approved testers only. To install the application, click on the "Install" button below on the i-device you wish to install the application on.</div><br><br>
+					<div style="width:200px;"><a class="btn btn-block btn-primary" href="itms-services://?action=download-manifest&url=http://wholeslide.com/test/Biolucida.plist">Install App</a></div>
+				</div>
+
+                </center>
+			</div>
+			
+		</div>
+
+		<div class="clearfix"></div>
+		
+        <br><br><br>
+
+		<footer>
+			<!-- <p>&copy; EyesFinder 2013, http://eyesfinder.com/</p> -->
+		</footer>
+	</div> 
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+  			var loginAttempt = function()
+  			{
+				if ($("#input01").val().toLowerCase() == 'sfn') {
+  					$("#loginArea").fadeOut(500, function(){
+  						$("#hiddenLink").fadeIn(500);	
+  					});
+  				}
+  				else
+  				{
+  					$("#input01").val('invalid attempt');
+  				}
+  			}
+
+  			$("#submitButton").on("click", function(e){
+  				loginAttempt();
+  			});
+
+  			$("#input01").keypress(function(e){
+  				if (e.which == 13)
+  				{
+  					event.preventDefault();
+  					loginAttempt();
+  				}
+  			});
+		});
+	</script>
+</body>
+</html>
+
