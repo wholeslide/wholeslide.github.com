@@ -4,7 +4,7 @@
   <title><![CDATA[]]></title>
   <link href="http://wholeslide.com/atom.xml" rel="self"/>
   <link href="http://wholeslide.com/"/>
-  <updated>2013-12-15T20:38:29-08:00</updated>
+  <updated>2013-12-17T21:17:21-05:00</updated>
   <id>http://wholeslide.com/</id>
   <author>
     <name><![CDATA[Rich Stoner]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[History: Nuance Speech Annotation]]></title>
     <link href="http://wholeslide.com/blog/2013/07/25/history-nuance-speech-annotation/"/>
-    <updated>2013-07-25T13:58:00-07:00</updated>
+    <updated>2013-07-25T13:58:00-04:00</updated>
     <id>http://wholeslide.com/blog/2013/07/25/history-nuance-speech-annotation</id>
     <content type="html"><![CDATA[<p>A brief demo of the speech recognition annotation feature in the WholeSlide pathology engine. The speech recognition is used to rapidly annotate regions of interest to quickly share with other clinicians and researchers. Speech recognition is powered by the  Nuance HealthCare SDK.</p>
 
@@ -30,7 +30,7 @@
   <entry>
     <title type="html"><![CDATA[History: Digital Library]]></title>
     <link href="http://wholeslide.com/blog/2013/07/25/history-digital-library/"/>
-    <updated>2013-07-25T13:56:00-07:00</updated>
+    <updated>2013-07-25T13:56:00-04:00</updated>
     <id>http://wholeslide.com/blog/2013/07/25/history-digital-library</id>
     <content type="html"><![CDATA[<p>When Cambridge released high resolution scans of Newton&rsquo;s notebooks, I quickly modified the WholeSlide source code to create a demo of how this technology could be used.</p>
 
@@ -44,7 +44,7 @@
   <entry>
     <title type="html"><![CDATA[History: WholeSlide v1]]></title>
     <link href="http://wholeslide.com/blog/2013/07/25/history-wholeslide-v1/"/>
-    <updated>2013-07-25T13:53:00-07:00</updated>
+    <updated>2013-07-25T13:53:00-04:00</updated>
     <id>http://wholeslide.com/blog/2013/07/25/history-wholeslide-v1</id>
     <content type="html"><![CDATA[<iframe src="http://player.vimeo.com/video/25954032?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="600" height="450" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
@@ -56,7 +56,7 @@
   <entry>
     <title type="html"><![CDATA[History: WholeBrainCatalog Mobile Engine]]></title>
     <link href="http://wholeslide.com/blog/2013/07/25/history-wbcme/"/>
-    <updated>2013-07-25T13:46:00-07:00</updated>
+    <updated>2013-07-25T13:46:00-04:00</updated>
     <id>http://wholeslide.com/blog/2013/07/25/history-wbcme</id>
     <content type="html"><![CDATA[<iframe src="http://player.vimeo.com/video/16454765?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="600" height="465" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
@@ -78,7 +78,7 @@
   <entry>
     <title type="html"><![CDATA[The blog is alive]]></title>
     <link href="http://wholeslide.com/blog/2013/07/20/the-blog-is-alive/"/>
-    <updated>2013-07-20T13:45:00-07:00</updated>
+    <updated>2013-07-20T13:45:00-04:00</updated>
     <id>http://wholeslide.com/blog/2013/07/20/the-blog-is-alive</id>
     <content type="html"><![CDATA[<p>This blog will house the updates for the open source project along with any collaborations.</p>
 ]]></content>
