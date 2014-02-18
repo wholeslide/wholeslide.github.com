@@ -4,7 +4,7 @@
   <title><![CDATA[Category: dura, | ]]></title>
   <link href="http://wholeslide.com/blog/categories/dura/atom.xml" rel="self"/>
   <link href="http://wholeslide.com/"/>
-  <updated>2014-02-18T12:46:45-08:00</updated>
+  <updated>2014-02-18T12:47:45-08:00</updated>
   <id>http://wholeslide.com/</id>
   <author>
     <name><![CDATA[Rich Stoner]]></name>
@@ -18,7 +18,7 @@
     <link href="http://wholeslide.com/blog/2014/02/18/em-navigation/"/>
     <updated>2014-02-18T12:43:00-08:00</updated>
     <id>http://wholeslide.com/blog/2014/02/18/em-navigation</id>
-    <content type="html"><![CDATA[<p>A quick demo of Dura, the core application behind WholeSlide Open. We&rsquo;re quickly workign towards a v1.0</p>
+    <content type="html"><![CDATA[<p>A quick demo of Dura, the core application behind WholeSlide Open. We&rsquo;re quickly working towards a v1.0</p>
 
 <iframe src="http://wholeslide.com//player.vimeo.com/video/80876206" width="500" height="652" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
