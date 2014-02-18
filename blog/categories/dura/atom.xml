@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: dura, | ]]></title>
+  <link href="http://wholeslide.com/blog/categories/dura/atom.xml" rel="self"/>
+  <link href="http://wholeslide.com/"/>
+  <updated>2014-02-18T12:46:45-08:00</updated>
+  <id>http://wholeslide.com/</id>
+  <author>
+    <name><![CDATA[Rich Stoner]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[EM Navigation]]></title>
+    <link href="http://wholeslide.com/blog/2014/02/18/em-navigation/"/>
+    <updated>2014-02-18T12:43:00-08:00</updated>
+    <id>http://wholeslide.com/blog/2014/02/18/em-navigation</id>
+    <content type="html"><![CDATA[<p>A quick demo of Dura, the core application behind WholeSlide Open. We&rsquo;re quickly workign towards a v1.0</p>
+
+<iframe src="http://wholeslide.com//player.vimeo.com/video/80876206" width="500" height="652" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+<p> <p><a href="http://vimeo.com/80876206">Open Viewer With EM annotation alpha</a> from <a href="http://vimeo.com/wholeslide">Rich Stoner</a> on <a href="https://vimeo.com">Vimeo</a>.</p></p>
+
+<h4>What can it do now? (build ~#4000)</h4>
+
+<ul>
+<li>View high resolution image sets from Brainmaps.org (uses boring 2D viewer, 3d in progress)</li>
+<li>Link with Dropbox (sandboxed currently, needs appstore submission before this will work)</li>
+<li>Connect to Knossos (EM) image services (experimental, issues with VRAM and opengl es 2)</li>
+<li>Connect to OpenConnectome (EM) servers (experimental, issues with VRAM and opengl es 2)</li>
+<li>Open converted EyeWire neuron meshes (experimental, issues with VRAM and opengl es 2)</li>
+</ul>
+
+
+<h4>What will it do in the future?</h4>
+
+<ul>
+<li>Connect to Aperio image servers</li>
+<li>Contain most of the image resources available in the original WholeSlide app.</li>
+<li>Connect to MicroBrightField&rsquo;s Biolucida Server.</li>
+<li>Connect to data stored on remote hard drives</li>
+<li>View and create annotations on high resolution images</li>
+<li>View stacks of high resolution images in 3D</li>
+<li>Visualize skeletonized annotations for EM</li>
+<li>Visualize volume annotations for EM</li>
+<li>Include data sources beyond neuroscience (dermatology, radiology)</li>
+<li>Integrate a searchable backend</li>
+<li>Create courses and link content together</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
