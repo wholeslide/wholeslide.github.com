@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="dsapp" class="cssmasks">
+
+<head>
+	<meta charset="utf-8">
+	<title>Viewer Prototype</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="description" content="DSA Image Viewer">
+	<meta name="author" content="Rich Stoner, David Gutman">
+
+    <link rel=stylesheet type=text/css
+          href="static/bower_components/flatstrap3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/ol.css"/>
+
+    <link rel=stylesheet type=text/css href="static/dsa.css"/>
+
+    <script src="static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="static/bower_components/jquery-ui/ui/jquery-ui.js"></script>
+    <script src="static/bower_components/flatstrap3/dist/js/bootstrap.min.js"></script>
+    <script src="static/bower_components/angular/angular.min.js"></script>
+    
+    <script src="static/bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.min.js"></script>
+    <script src="static/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="static/bower_components/angular-xml/angular-xml.min.js"></script>
+    <script src="static/bower_components/mousetrap/mousetrap.min.js"></script>
+    <script src="static/bower_components/mousetrap/mousetrap.min.js"></script>
+    <script src="static/bower_components/angular-mousetrap/src/keypress.js"></script>
+    <script src="static/bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+    <script src="static/bower_components/angular-touch/angular-touch.min.js"></script>
+    <script type="text/javascript" src="static/bower_components/venturocket-angular-slider/build/angular-slider.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="static/bower_components/ng-prettyjson/dist/ng-prettyjson.min.css">
+
+    <script type="text/javascript" src="static/bower_components/ng-prettyjson/dist/ng-prettyjson.min.js"></script>
+
+
+    <!--<script type="text/javascript" src="static/lib/ol-whitespace.js"></script>-->
+    <script type="text/javascript" src="static/lib/ol.js"></script>
+    <!-- // <script type="text/javascript" src="static/lib/opzenseadragon.js"></script> -->
+    <!-- // <script type="text/javascript" src="static/lib/annotation.js"></script> -->
+
+        <!--<script src="static/bower_components/chrome-tabs/js/chrome-tabs.js"></script>-->
+
+    <script type="text/javascript" src="static/dsa.js"></script>
+
+ <style>
+
+  slider {
+    display:     block;
+    position:    relative;
+    height:      20px;
+    /*width:       500px;*/
+  }
+
+  slider span.bar {
+    height:     50%;
+    z-index:    0;
+    background: #000;
+    left:       0;
+    top:        25%;
+    cursor:     pointer;
+  }
+
+  slider span.bar.selection, slider span.bar.unselected {
+  }
+
+  slider span.bar.selection {
+    background: #0a0;
+    opacity:    0.5;
+  }
+
+  slider span.bar.unselected {
+    width:      auto;
+    background: #a00;
+    opacity:    0.5;
+  }
+
+  slider span.pointer {
+    cursor:           pointer;
+    width:            15px;
+    top:              0;
+    bottom:           0;
+    background-color: #ffcc00;
+  }
+
+  slider span.pointer:hover {
+  }
+
+  slider span.pointer.active {
+  }
+
+  slider span.bubble {
+    font-size:   0.7em;
+    line-height: 1.4em;
+    font-family: sans-serif;
+    text-align:  center;
+    text-shadow: none;
+    top:         -1.3em;
+    cursor:      pointer;
+  }
+
+  slider span.bubble.selection, slider span.bubble.limit {
+    top: 25%;
+  }
+
+  slider span.bubble.selection {
+  }
+
+  slider span.bubble.limit {
+  }
+
+  slider span.bubble.low, slider span.bubble.high {
+  }
+  
+  ::-ms-tooltip {
+    display: none;
+  }
+  
+  #prettyjson {
+    font-size: 70%;
+  }
+
+  #slider-container {
+    -webkit-touch-callout: none;
+    -webkit-user-select:   none;
+    -khtml-user-select:    none;
+    -moz-user-select:      -moz-none;
+    -ms-user-select:       none;
+    user-select:           none;
+  }
+
+  .ol-attribution
+   {
+    display:none;
+   }
+
+    </style>
+
+</head>
+
+
+
+<body ng-controller="ApplicationController">
+
+<div id="site-wrapper">
+    <div id="site-canvas">
+
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation" id="headerbar">
+      <div class="container-fluid">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="http://microbrightfield.com"><img class="brandlogo" src="static/images/logosmall.png"/></a>
+        </div>
+
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+
+
+
+          </ul>
+
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input id="image_search_url" type="text" class="form-control" style="width:500px;" placeholder="" value="GaillardKartenandSauve_NileRat/NR_1002_BilatCTb_Retina_Fluor_Sag02">
+            </div>
+            <button type="submit" class="btn btn-default" ng-click="loadImageFromURL()">Load</button>
+          </form>
+
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="#" class="toggle-nav btn"><i class="glyphicon glyphicon-align-left"></i></a></li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+     <div id="angular_id" class="container-fluid image-content">
+
+        <div id="map" class="map"></div>
+
+        <div id="image_browser" ng-controller="ImageBrowserController">
+
+              <div id="znavigation">
+                <slider
+                    ng-show="show_z_nav"
+                    ng-model="currentz"
+                    floor="0"
+                    ceiling="100"
+                    step="1">
+                </slider>
+              </div>
+
+              <div id="inner_thumbnail_container" >
+
+                  <span ng-repeat='img in image_list' ng-click="selectImage(img)">
+                      <div class="thumb_title">{{img.name}}</div>
+                      <img class="thumb_image" ng-src='{{img.thumbnail}}'/>
+                  </span>
+              </div>
+
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div id="site-menu">
+
+            <h4>Metadata</h4>
+
+             <pre class='supersmall' pretty-json="last_image_metadata" />
+
+
+       </div>
+
+
+     </div>
+
+    </div>
+</div>
+
+
+</body>
+
+</html>
+
+

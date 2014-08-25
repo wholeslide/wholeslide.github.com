@@ -4,7 +4,7 @@
   <title><![CDATA[Category: metadata | ]]></title>
   <link href="http://wholeslide.com/blog/categories/metadata/atom.xml" rel="self"/>
   <link href="http://wholeslide.com/"/>
-  <updated>2014-07-02T21:34:12-04:00</updated>
+  <updated>2014-08-24T20:34:42-07:00</updated>
   <id>http://wholeslide.com/</id>
   <author>
     <name><![CDATA[Rich Stoner]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Building the index]]></title>
     <link href="http://wholeslide.com/blog/2014/02/18/building-the-index/"/>
-    <updated>2014-02-18T12:48:00-05:00</updated>
+    <updated>2014-02-18T12:48:00-08:00</updated>
     <id>http://wholeslide.com/blog/2014/02/18/building-the-index</id>
     <content type="html"><![CDATA[<p>This post will provide a high-level view of the indexing approach used by the DURA remote data source.</p>
 
